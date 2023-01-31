@@ -1,9 +1,0 @@
-nav {
-    display: flex;
-    width: 100%;
-    min-height: 60px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    box-shadow: rgba(0, 0, 0, 0.075) 0px 2px 4px 0px;
-}

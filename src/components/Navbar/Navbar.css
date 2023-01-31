@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;800&family=Passion+One&display=swap');
+
+nav {
+    display: flex;
+    width: 100%;
+    min-height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: rgba(0, 0, 0, 0.075) 0px 2px 4px 0px;
+}
+
+nav > p {
+    font-family: 'Passion One', sans-serif;
+    font-size: 2rem;
+}
+
+.right-nav {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.right-nav > a {
+    margin: 0 1rem;
+    appearance: none;
+}

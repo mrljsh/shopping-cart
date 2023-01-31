@@ -1,0 +1,5 @@
+.home {
+    background-color: powderblue;
+    display: flex;
+    height: calc(100vh - 70px);
+}
