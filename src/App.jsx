@@ -7,9 +7,8 @@ import Shop from "./components/Shop/Shop";
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
