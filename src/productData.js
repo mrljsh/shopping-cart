@@ -34,6 +34,16 @@ const productData = [
     name: "Nintendo Switch OLED",
     price: 339,
   },
+  {
+    id: 8,
+    name: "Nintendo Switch",
+    price: 289,
+  },
+  {
+    id: 9,
+    name: "Nintendo Switch Lite",
+    price: 179,
+  },
 ];
 
 export default productData;

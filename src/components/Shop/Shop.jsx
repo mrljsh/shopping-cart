@@ -3,11 +3,17 @@ import productData from "../../productData";
 import Products from "./Products";
 import "./Shop.css";
 
-const Shop = () => {
+const Shop = ({ addToCart }) => {
   return (
     <div className="shop">
       {productData.map((product) => (
-        <Products name={product.name} price={product.price} key={product.id} />
+        <Products
+          name={product.name}
+          price={product.price}
+          key={product.id}
+          id={product.id}
+          addToCart={addToCart}
+        />
       ))}
     </div>
   );

@@ -19,7 +19,9 @@ nav > p {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.right-nav > a {
+.right-nav > * {
+    display: inline-block;
     margin: 0 1rem;
     appearance: none;
+    text-decoration: none;
 }
