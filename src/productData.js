@@ -29,6 +29,11 @@ const productData = [
     name: "Microsoft Xbox Series S",
     price: 289,
   },
+  {
+    id: 7,
+    name: "Nintendo Switch OLED",
+    price: 339,
+  },
 ];
 
 export default productData;

@@ -3,4 +3,5 @@
     display: flex;
     height: calc(100vh - 70px);
     flex-wrap: wrap;
+    justify-content: center;
 }
