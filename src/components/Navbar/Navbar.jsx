@@ -5,11 +5,15 @@ import "./Navbar.css";
 const Navbar = ({ cart }) => {
   return (
     <nav>
-      <p>HARDWARE STORE</p>
+      <Link to={"/"}>
+        <p>CONSOLE STORE</p>
+      </Link>
       <div className="right-nav">
         <Link to={"/"}>Home</Link>
         <Link to={"/shop"}>Shop</Link>
-        <p>Cart ({cart.length})</p>
+        <Link to={"/"} className="cart-button">
+          Cart ({cart.length})
+        </Link>
       </div>
     </nav>
   );

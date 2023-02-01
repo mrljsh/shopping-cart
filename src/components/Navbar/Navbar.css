@@ -10,7 +10,17 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.075) 0px 2px 4px 0px;
 }
 
-nav > p {
+nav > a {
+    appearance: none;
+    text-decoration: none;
+}
+
+nav > a:visited {
+    appearance: none;
+    color: black;
+}
+
+nav > a > p {
     font-family: 'Passion One', sans-serif;
     font-size: 2rem;
 }
@@ -22,6 +32,31 @@ nav > p {
 .right-nav > * {
     display: inline-block;
     margin: 0 1rem;
+}
+
+.right-nav > a {
     appearance: none;
     text-decoration: none;
+}
+
+.right-nav > a {
+    color: #000;
+}
+
+.right-nav > .cart-button {
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #ff5000;
+    line-height: 1.15;
+    font-size: 16px;
+}
+
+.right-nav > .cart-button:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px orange;
 }

@@ -10,9 +10,19 @@
     background-position: bottom;
     background-color: #fc7f2d;
     background-blend-mode: overlay;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.home-left > button {
+.home-left > h2 {
+    font-size: 3rem;
+}
+
+.home-left > p {
+    font-size: 2rem;
+}
+
+.home-left > a > button {
     display: inline-block;
     outline: 0;
     border: 0;
@@ -21,6 +31,7 @@
     background: radial-gradient( 100% 100% at 100% 0%, #fc7f2d 0%, #eb9f2e 100% );
     box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
     padding: 0 32px;
+    margin: 16px 0px;
     border-radius: 6px;
     color: #fff;
     height: 48px;
@@ -29,12 +40,12 @@
     transition: box-shadow 0.15s ease,transform 0.15s ease;
 }
 
-.home-left > button:hover {
+.home-left > a > button:hover {
     box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #e07e3c;
     transform: translateY(-2px);
 }
 
-.home-left > button:active{
+.home-left > a > button:active{
     box-shadow: inset 0px 3px 7px #e06a3c;
     transform: translateY(2px);
 }
