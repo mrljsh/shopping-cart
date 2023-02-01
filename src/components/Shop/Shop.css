@@ -4,4 +4,6 @@
     height: calc(100vh - 70px);
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
 }
