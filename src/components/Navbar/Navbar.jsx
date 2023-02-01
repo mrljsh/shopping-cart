@@ -11,7 +11,7 @@ const Navbar = ({ cart }) => {
       <div className="right-nav">
         <Link to={"/"}>Home</Link>
         <Link to={"/shop"}>Shop</Link>
-        <Link to={"/"} className="cart-button">
+        <Link to={"/cart"} className="cart-button">
           Cart ({cart.length})
         </Link>
       </div>

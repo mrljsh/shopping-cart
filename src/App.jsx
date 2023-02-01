@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Shop from "./components/Shop/Shop";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop addToCart={handleAddToCart} />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </BrowserRouter>
     </div>
