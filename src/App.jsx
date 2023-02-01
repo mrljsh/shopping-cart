@@ -10,7 +10,23 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = (product) => {
-    setCart([...cart, product]);
+    if (cart.filter((x) => x.id === product.id).length > 0) {
+      console.log("Filtering works");
+      setCart(
+        cart.map((cartItem) => {
+          if (cartItem.id === product.id) {
+            return {
+              ...cartItem,
+              quantity: cartItem.quantity + product.quantity,
+            };
+          } else {
+            return cartItem;
+          }
+        })
+      );
+    } else {
+      setCart([...cart, product]);
+    }
   };
 
   return (
