@@ -4,7 +4,13 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="home">
-      <p>Home page</p>
+      <div className="home-left">
+        <p>Home page</p>
+        <button>SHOP</button>
+      </div>
+      <div className="home-right">
+        <p>left</p>
+      </div>
     </div>
   );
 };
