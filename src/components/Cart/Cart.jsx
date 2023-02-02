@@ -17,9 +17,12 @@ const Cart = ({ cart }) => {
 
   return (
     <div className="cart">
-      {cartWithDetails.map((product) => (
-        <CartProduct product={product} key={product.id} />
-      ))}
+      <h1>Your shopping cart</h1>
+      <div className="cart-wrapper">
+        {cartWithDetails.map((product) => (
+          <CartProduct product={product} key={product.id} />
+        ))}
+      </div>
       <p>Total price: {totalPrice}$</p>
     </div>
   );

@@ -1,0 +1,22 @@
+.cart {
+    padding: 1%;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart > h1 {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.cart-wrapper {
+    width: 70%;
+}
+
+.product-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
