@@ -41,7 +41,6 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(cart)}
       <BrowserRouter>
         <Navbar cart={cart} />
         <Routes>
