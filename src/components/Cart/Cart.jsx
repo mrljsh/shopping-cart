@@ -6,8 +6,8 @@ import fetchProduct from "../../fetchProduct";
 const Cart = ({ cart }) => {
   const cartWithDetails = cart.map((product) => {
     const productData = fetchProduct(product.id);
-    const { name, price } = productData[0];
-    return { ...product, name: name, price: price };
+    const { name, price, image } = productData[0];
+    return { ...product, name: name, price: price, image: image };
   });
 
   const totalPrice = cartWithDetails.reduce(
