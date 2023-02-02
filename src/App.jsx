@@ -9,36 +9,28 @@ import Cart from "./components/Cart/Cart";
 function App() {
   const [cart, setCart] = useState([]);
 
+  //If product with id already exists in cart, add +1 quantity, else add product to cart
   const handleAddToCart = (product) => {
-    if (cart.filter((x) => x.id === product.id).length > 0) {
-      setCart(
-        cart.map((cartItem) => {
-          if (cartItem.id === product.id) {
-            return {
-              ...cartItem,
-              quantity: cartItem.quantity + product.quantity,
-            };
-          } else {
-            return cartItem;
-          }
-        })
-      );
-    } else {
-      setCart([...cart, product]);
-    }
+    cart.some((x) => x.id === product.id)
+      ? setCart(
+          cart.map((cartItem) => {
+            //Check if this is item that already exists in cart, add new quantity or
+            //do nothing
+            return cartItem.id === product.id
+              ? { ...cartItem, quantity: cartItem.quantity + product.quantity }
+              : cartItem;
+          })
+        )
+      : setCart([...cart, product]);
   };
 
   const handleQuantity = (id, newQuantity) => {
     setCart(
       cart.map((cartItem) => {
-        if (cartItem.id === id) {
-          return {
-            ...cartItem,
-            quantity: newQuantity,
-          };
-        } else {
-          return cartItem;
-        }
+        //find item with specific id and set new quantity
+        return cartItem.id === id
+          ? { ...cartItem, quantity: newQuantity }
+          : { ...cartItem };
       })
     );
   };
