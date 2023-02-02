@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(194, 194, 194);
+    border-bottom: 1px solid #f7d1ac;
 }
 
 .product-data-image {
@@ -40,4 +40,32 @@
 .product-data-details > p:first-child {
     font-size: 2rem;
     font-weight: 700;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.quantity-input > .quantity-number {
+    width: 64px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid #f7d1ac;
+    background: none;
+    font-size: 1;
+    font-weight: 700;
+    -moz-appearance: textfield;
+}
+
+.quantity-btn {
+    font-size: 1rem;
+    width: 42px;
+    height: 42px;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
 }

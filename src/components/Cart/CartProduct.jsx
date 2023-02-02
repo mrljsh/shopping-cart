@@ -1,4 +1,5 @@
 import React from "react";
+import QuantityInput from "./QuantityInput";
 
 const CartProduct = ({ product }) => {
   const { id, quantity, name, price, image } = product;
@@ -8,8 +9,8 @@ const CartProduct = ({ product }) => {
       <img src={image} alt={name} className="product-data-image" />
       <div className="product-data-details">
         <p>{name}</p>
-        <p>Quantity: {quantity}</p>
       </div>
+      <QuantityInput quantity={quantity} />
       <div className="product-data-prices">
         <p>Price: {price}$</p>
         <p>Qty price: {price * quantity}$</p>
