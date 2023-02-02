@@ -60,6 +60,17 @@
     -moz-appearance: textfield;
 }
 
+.quantity-input > .quantity-number[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.quantity-input > 
+.quantity-number::-webkit-outer-spin-button,  
+.quantity-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .quantity-btn {
     font-size: 1rem;
     width: 42px;
