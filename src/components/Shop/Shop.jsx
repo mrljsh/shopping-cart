@@ -10,6 +10,7 @@ const Shop = ({ addToCart }) => {
         <Products
           name={product.name}
           price={product.price}
+          image={product.image}
           key={product.id}
           id={product.id}
           addToCart={addToCart}

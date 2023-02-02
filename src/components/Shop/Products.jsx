@@ -1,8 +1,7 @@
 import React from "react";
 import "./Products.css";
-import PS5Image from "./../../assets/images/ps5.png";
 
-const Products = ({ name, price, id, addToCart }) => {
+const Products = ({ name, price, image, id, addToCart }) => {
   const handleAddButton = (id) => {
     addToCart({
       id: id,
@@ -12,7 +11,7 @@ const Products = ({ name, price, id, addToCart }) => {
 
   return (
     <div className="product-card">
-      <img src={PS5Image} />
+      <img src={image} />
       <h1>{name}</h1>
       <p>{price}$</p>
       <button onClick={() => handleAddButton(id)}>Add to cart</button>
