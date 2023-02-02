@@ -3,7 +3,7 @@ import CartProduct from "./CartProduct";
 import "./Cart.css";
 import fetchProduct from "../../fetchProduct";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleQuantity }) => {
   const cartWithDetails = cart.map((product) => {
     const productData = fetchProduct(product.id);
     const { name, price, image } = productData[0];
@@ -20,7 +20,11 @@ const Cart = ({ cart }) => {
       <h1>Your shopping cart</h1>
       <div className="cart-wrapper">
         {cartWithDetails.map((product) => (
-          <CartProduct product={product} key={product.id} />
+          <CartProduct
+            product={product}
+            key={product.id}
+            handleQuantity={handleQuantity}
+          />
         ))}
       </div>
       <p>Total price: {totalPrice}$</p>

@@ -11,7 +11,6 @@ function App() {
 
   const handleAddToCart = (product) => {
     if (cart.filter((x) => x.id === product.id).length > 0) {
-      console.log("Filtering works");
       setCart(
         cart.map((cartItem) => {
           if (cartItem.id === product.id) {
@@ -29,14 +28,33 @@ function App() {
     }
   };
 
+  const handleQuantity = (id, newQuantity) => {
+    setCart(
+      cart.map((cartItem) => {
+        if (cartItem.id === id) {
+          return {
+            ...cartItem,
+            quantity: newQuantity,
+          };
+        } else {
+          return cartItem;
+        }
+      })
+    );
+  };
+
   return (
     <div className="App">
+      {console.log(cart)}
       <BrowserRouter>
         <Navbar cart={cart} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop addToCart={handleAddToCart} />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route
+            path="/cart"
+            element={<Cart cart={cart} handleQuantity={handleQuantity} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

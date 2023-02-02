@@ -1,7 +1,7 @@
 import React from "react";
 import QuantityInput from "./QuantityInput";
 
-const CartProduct = ({ product }) => {
+const CartProduct = ({ product, handleQuantity }) => {
   const { id, quantity, name, price, image } = product;
 
   return (
@@ -10,7 +10,11 @@ const CartProduct = ({ product }) => {
       <div className="product-data-details">
         <p>{name}</p>
       </div>
-      <QuantityInput quantity={quantity} />
+      <QuantityInput
+        id={id}
+        quantity={quantity}
+        handleQuantity={handleQuantity}
+      />
       <div className="product-data-prices">
         <p>Price: {price}$</p>
         <p>Qty price: {price * quantity}$</p>
