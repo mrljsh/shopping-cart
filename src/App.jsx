@@ -35,6 +35,10 @@ function App() {
     );
   };
 
+  const handleRemoveFromCart = (index) => {
+    setCart(cart.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="App">
       {console.log(cart)}
@@ -45,7 +49,13 @@ function App() {
           <Route path="/shop" element={<Shop addToCart={handleAddToCart} />} />
           <Route
             path="/cart"
-            element={<Cart cart={cart} handleQuantity={handleQuantity} />}
+            element={
+              <Cart
+                cart={cart}
+                handleQuantity={handleQuantity}
+                handleRemove={handleRemoveFromCart}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>

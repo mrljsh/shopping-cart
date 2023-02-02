@@ -80,3 +80,15 @@
     border: none;
     cursor: pointer;
 }
+
+.product-data-prices {
+    margin: 0px 16px
+}
+
+
+.delete-button {
+    appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
