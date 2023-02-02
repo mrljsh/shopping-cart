@@ -9,6 +9,10 @@ const QuantityInput = ({ id, quantity, handleQuantity }) => {
     }
   };
 
+  const handleInput = (e) => {
+    handleQuantity(id, +e.value);
+  };
+
   return (
     <div className="quantity-input">
       <button className="quantity-btn" onClick={() => handleBtn("-")}>
@@ -20,6 +24,7 @@ const QuantityInput = ({ id, quantity, handleQuantity }) => {
         id="quantity"
         value={quantity}
         className="quantity-number"
+        onChange={(e) => handleInput(e.target)}
       />
       <button className="quantity-btn" onClick={() => handleBtn("+")}>
         +
