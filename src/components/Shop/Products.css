@@ -14,7 +14,7 @@
     transform: scale(0.98);
 }
 
-.product-card > img {
+.product-card > a > img {
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: contain;

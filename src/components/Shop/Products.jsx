@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Products.css";
 
 const Products = ({ name, price, image, id, addToCart }) => {
@@ -11,7 +12,9 @@ const Products = ({ name, price, image, id, addToCart }) => {
 
   return (
     <div className="product-card">
-      <img src={image} />
+      <Link to={`./${id}`}>
+        <img src={image} />
+      </Link>
       <h1>{name}</h1>
       <p>{price}$</p>
       <button onClick={() => handleAddButton(id)}>Add to cart</button>
