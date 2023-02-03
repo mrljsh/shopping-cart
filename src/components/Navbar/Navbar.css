@@ -37,10 +37,12 @@ nav > a > p {
 .right-nav > a {
     appearance: none;
     text-decoration: none;
+    color: #000;
+    font-weight: 400;
 }
 
-.right-nav > a {
-    color: #000;
+.right-nav > a.active {
+    color: orangered;
 }
 
 .right-nav > .cart-button {

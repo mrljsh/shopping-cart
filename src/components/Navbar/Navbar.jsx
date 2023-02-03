@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = ({ cart }) => {
@@ -9,8 +9,8 @@ const Navbar = ({ cart }) => {
         <p>CONSOLE STORE</p>
       </Link>
       <div className="right-nav">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/shop"}>Shop</Link>
+        <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"/shop"}>Shop</NavLink>
         <Link to={"/cart"} className="cart-button">
           Cart ({cart.length})
         </Link>
