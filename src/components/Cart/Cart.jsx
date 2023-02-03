@@ -39,7 +39,7 @@ const Cart = ({ cart, handleQuantity, handleRemove }) => {
             />
           ))}
           <p className="total-price">Total price: {totalPrice}$</p>
-          <button className="checkout-btn" disabled="true">
+          <button className="checkout-btn" disabled={true}>
             Checkout
           </button>
         </div>
