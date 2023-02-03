@@ -2,8 +2,8 @@
     padding: 1%;
     display: flex;
     min-height: calc(100vh - 70px);
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 12px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    row-gap: 12px;
+    column-gap: 16px;
 }
