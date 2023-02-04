@@ -18,7 +18,7 @@ const Details = ({ addToCart }) => {
 
   const handleAddToCart = () => {
     addToCart({
-      id: id,
+      id: +id,
       quantity: quantity,
     });
   };
