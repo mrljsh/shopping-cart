@@ -20,6 +20,10 @@
     flex: 1;
     display: flex;
     flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+
 }
 
 .details-info > .price-container > p {
