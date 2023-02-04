@@ -5,7 +5,7 @@ import "./Details.css";
 import QuantityInput from "../Cart/QuantityInput";
 import AddToBag from "../Shop/AddToBag";
 
-const Details = () => {
+const Details = ({ addToCart }) => {
   const [quantity, setQuantity] = useState(1);
 
   const { id } = useParams();
@@ -17,7 +17,10 @@ const Details = () => {
   };
 
   const handleAddToCart = () => {
-    console.log(id, quantity);
+    addToCart({
+      id: id,
+      quantity: quantity,
+    });
   };
 
   return (

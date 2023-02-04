@@ -10,7 +10,7 @@ import Details from "./components/Details/Details";
 function App() {
   const [cart, setCart] = useState([]);
 
-  //If product with id already exists in cart, add +1 quantity, else add product to cart
+  //If product with id already exists in cart, add new quantity, else add product to cart
   const handleAddToCart = (product) => {
     cart.some((x) => x.id === product.id)
       ? setCart(
@@ -57,7 +57,10 @@ function App() {
               />
             }
           />
-          <Route path="/shop/:id" element={<Details />} />
+          <Route
+            path="/shop/:id"
+            element={<Details addToCart={handleAddToCart} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
