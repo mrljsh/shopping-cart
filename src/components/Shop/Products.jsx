@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Products.css";
+import AddToBag from "./AddToBag";
 
-const Products = ({ name, price, image, id, addToCart }) => {
-  const handleAddButton = (id) => {
+const Products = ({ product, addToCart }) => {
+  const { name, price, image, id } = product;
+
+  const handleAddButton = () => {
     addToCart({
       id: id,
       quantity: 1,
@@ -17,7 +20,7 @@ const Products = ({ name, price, image, id, addToCart }) => {
       </Link>
       <h1>{name}</h1>
       <p>{price}$</p>
-      <button onClick={() => handleAddButton(id)}>Add to cart</button>
+      <AddToBag handleClick={handleAddButton} />
     </div>
   );
 };

@@ -7,14 +7,7 @@ const Shop = ({ addToCart }) => {
   return (
     <div className="shop">
       {productData.map((product) => (
-        <Products
-          name={product.name}
-          price={product.price}
-          image={product.image}
-          key={product.id}
-          id={product.id}
-          addToCart={addToCart}
-        />
+        <Products product={product} key={product.id} addToCart={addToCart} />
       ))}
     </div>
   );
