@@ -2,7 +2,7 @@
 
 A shopping application built using React and Vite. This application allows users to browse and purchase items from a virtual store.
 
-(Live demo here)[https://mrljsh.github.io/shopping-cart]
+[Live demo here](https://mrljsh.github.io/shopping-cart)
 
 ## Features
 
@@ -19,18 +19,18 @@ A shopping application built using React and Vite. This application allows users
 
 - Clone the repository to your local machine:
 
-`https://github.com/mrljsh/shopping-cart.git`
+```https://github.com/mrljsh/shopping-cart.git```
 
 - Change into the project directory:
 
-`cd shopping-app`
+```cd shopping-app```
 
 - Install the dependencies:
 
-` npm install`
+```npm install```
 
 - Start the application
 
-` npm run dev`
+```npm run dev```
 
 The application should now be running at http://localhost:5173/ in your browser.
