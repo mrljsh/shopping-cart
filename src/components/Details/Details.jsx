@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import fetchProduct from "./../../fetchProduct";
 import "./Details.css";
 import QuantityInput from "../Cart/QuantityInput";
+import AddToBag from "../Shop/AddToBag";
 
 const Details = () => {
   const [quantity, setQuantity] = useState(1);
@@ -13,6 +14,10 @@ const Details = () => {
 
   const handleQuantity = (quantity) => {
     setQuantity(quantity);
+  };
+
+  const handleAddToCart = () => {
+    console.log(id, quantity);
   };
 
   return (
@@ -27,6 +32,7 @@ const Details = () => {
         </div>
         <div className="add-to-cart">
           <QuantityInput handleQuantity={handleQuantity} quantity={quantity} />
+          <AddToBag handleClick={handleAddToCart} />
         </div>
       </div>
     </div>
