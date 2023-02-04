@@ -5,6 +5,10 @@ import DeleteIcon from "./../../assets/trash-outline.svg";
 const CartProduct = ({ product, handleQuantity, index, handleRemove }) => {
   const { id, quantity, name, price, image } = product;
 
+  const handleQuantityChange = (quantityInput) => {
+    handleQuantity(id, quantityInput);
+  };
+
   const handleRemoveClick = () => {
     handleRemove(index);
   };
@@ -18,7 +22,7 @@ const CartProduct = ({ product, handleQuantity, index, handleRemove }) => {
       <QuantityInput
         id={id}
         quantity={quantity}
-        handleQuantity={handleQuantity}
+        handleQuantity={handleQuantityChange}
       />
       <div className="product-data-prices">
         <p>Price: {price}$</p>

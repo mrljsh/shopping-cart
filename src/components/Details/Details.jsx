@@ -11,7 +11,7 @@ const Details = () => {
   const details = fetchProduct(id);
   const { name, price, image } = details[0];
 
-  const handleQuantity = (id, quantity) => {
+  const handleQuantity = (quantity) => {
     setQuantity(quantity);
   };
 
@@ -26,11 +26,7 @@ const Details = () => {
           <p className="price">{price}$</p>
         </div>
         <div className="add-to-cart">
-          <QuantityInput
-            handleQuantity={handleQuantity}
-            id={id}
-            quantity={quantity}
-          />
+          <QuantityInput handleQuantity={handleQuantity} quantity={quantity} />
         </div>
       </div>
     </div>

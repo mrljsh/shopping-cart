@@ -1,16 +1,16 @@
 import React from "react";
 
-const QuantityInput = ({ id, quantity, handleQuantity }) => {
+const QuantityInput = ({ quantity, handleQuantity }) => {
   const handleBtn = (operator) => {
     if (operator === "-") {
-      handleQuantity(id, quantity - 1);
+      handleQuantity(quantity - 1);
     } else {
-      handleQuantity(id, quantity + 1);
+      handleQuantity(quantity + 1);
     }
   };
 
   const handleInput = (e) => {
-    handleQuantity(id, +e.value);
+    handleQuantity(+e.value);
   };
 
   return (
