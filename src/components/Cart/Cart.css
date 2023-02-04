@@ -122,3 +122,23 @@
     border: 0;
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .cart-wrapper {
+        width: 90%;
+    }
+
+    .product-data {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .product-data > * {
+        margin: 8px 0px;
+    }
+
+    .delete-button {
+        font-size: 24px;
+    }
+}

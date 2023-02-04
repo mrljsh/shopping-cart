@@ -11,7 +11,7 @@
 }
 
 .details-image > img {
-    max-width: min(750px, 100vw);
+    max-width: 750px;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
@@ -37,4 +37,11 @@
 .add-to-cart {
     display: flex;
     flex-flow: row nowrap;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .details-image > img {
+        max-width: 80vw;
+    }
 }

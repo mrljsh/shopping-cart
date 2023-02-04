@@ -8,6 +8,10 @@ nav {
     justify-content: space-between;
     padding: 0 5%;
     box-shadow: rgba(0, 0, 0, 0.075) 0px 2px 4px 0px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 nav > a {
@@ -17,12 +21,12 @@ nav > a {
 
 nav > a:visited {
     appearance: none;
-    color: black;
 }
 
 nav > a > p {
     font-family: 'Passion One', sans-serif;
     font-size: 2rem;
+    color: black;
 }
 
 .right-nav {
@@ -61,4 +65,16 @@ nav > a > p {
 .right-nav > .cart-button:hover {
     transition: all .1s ease;
     box-shadow: 0 0 0 0 #fff, 0 0 0 3px orange;
+}
+
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-flow: column wrap;
+        padding: 16px;
+    }
+
+    nav > a {
+        margin: 16px;
+    }
 }
