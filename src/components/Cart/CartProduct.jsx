@@ -1,6 +1,6 @@
 import React from "react";
 import QuantityInput from "./QuantityInput";
-import DeleteIcon from "./../../assets/trash-outline.svg";
+import { Link } from "react-router-dom";
 
 const CartProduct = ({ product, handleQuantity, index, handleRemove }) => {
   const { id, quantity, name, price, image } = product;
@@ -15,7 +15,9 @@ const CartProduct = ({ product, handleQuantity, index, handleRemove }) => {
 
   return (
     <div className="product-data">
-      <img src={image} alt={name} className="product-data-image" />
+      <Link to={`/shop/${id}`}>
+        <img src={image} alt={name} className="product-data-image" />
+      </Link>
       <div className="product-data-details">
         <p>{name}</p>
       </div>
